@@ -2,4 +2,5 @@
 Responsive Layout using react & mui
 
 ## 📸Screenshot
-![React-Mui-Project](https://user-images.githubusercontent.com/90098467/231623207-1152bb23-3c2c-468a-b2b0-b34e38e5666d.png)
+
+![React-Mui-Project](https://user-images.githubusercontent.com/90098467/231626928-06f01c2c-0c51-4a2b-ae0b-c45b1e1ef8a7.png)
