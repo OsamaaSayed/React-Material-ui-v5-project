@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 import ParticlesComponent from "../../components/ParticlesComponent";
+
+import { StyledHeaderButton } from "./../../styled/StyledButton";
+
+import homeBg from "../../assets/images/home-bg-4.jpg";
 
 const Header = () => {
   return (
@@ -15,7 +18,7 @@ const Header = () => {
       <Box
         minHeight="100vh"
         sx={{
-          backgroundImage: "url(/src/assets/images/home-bg-4.jpg)",
+          backgroundImage: `url(${homeBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
@@ -27,7 +30,7 @@ const Header = () => {
           alignItems="center"
           minHeight="100vh"
           width="100%"
-          sx={{ backgroundColor: "rgba(0, 38, 59,0.2)" }}     
+          sx={{ backgroundColor: "rgba(0, 38, 59,0.2)" }}
         >
           <Stack
             direction="column"
@@ -69,27 +72,16 @@ const Header = () => {
             </Box>
 
             <Box>
-              <Button
-                size="small"
-                endIcon={<ArrowDownwardIcon />}
-                sx={{
-                  color: "black",
-                  backgroundColor: "white",
-                  "&:hover": { color: "white", backgroundColor: "black" },
-                  textTransform: "capitalize",
-                  paddingX: "10px",
-                  "& .MuiButton-endIcon": { marginLeft: "4px" },
-                }}
-              >
+              <StyledHeaderButton size="small" endIcon={<ArrowDownwardIcon />}>
                 Keep Reading
-              </Button>
+              </StyledHeaderButton>
             </Box>
           </Stack>
         </Box>
-      <ParticlesComponent id="tsparticles" />
+        <ParticlesComponent id="tsparticles" />
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -3,9 +3,14 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 
 import SectionTitle from "../../components/shared/SectionTitle";
+
+import { StyledAboutUsButton } from "../../styled/StyledButton";
+import { StyledServicesAboutBox } from "./../../styled/StyledBox";
+import { StyledServicesAboutGrid } from "./../../styled/StyledGrid";
+
+import bgAbout from '../../assets/images/bg-left-img.jpg'
 
 const About = () => {
   const data = {
@@ -44,47 +49,27 @@ const About = () => {
                   Donec ut accumsan metus, sit amet efficitur diam.
                 </Typography>
                 <Box>
-                  <Button
-                    sx={{
-                      color: "#fff",
-                      marginTop: "30px",
-                      backgroundColor: "#1ca7ec",
-                      padding:"12px 35px",
-                      fontSize:"12px",
-                      opacity:"0.7",
-                      transition:"all .3s ease-in-out",
-                      "&:hover":{opacity:"1",backgroundColor:"#1ca7ec"}
-                    }}
-                  >
-                    Buy Template
-                  </Button>
+                  <StyledAboutUsButton>Buy Template</StyledAboutUsButton>
                 </Box>
               </Stack>
             </Box>
           </Grid>
 
-          <Grid
+          <StyledServicesAboutGrid
             item
             md={6}
             sx={{
-              position: { md: "absolute" },
               marginLeft: { md: "50%" },
-              height: { xs: "500px", md: "100%" },
             }}
-            top={0}
-            width="100%"
           >
-            <Box
-              height="100%"
-              width="100%"
+            <StyledServicesAboutBox
               sx={{
-                backgroundImage: "url(/src/assets/images/bg-left-img.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${bgAbout})`
               }}
-            ></Box>
-          </Grid>
+            ></StyledServicesAboutBox>
+          </StyledServicesAboutGrid>
+
+          
         </Grid>
       </Box>
     </>

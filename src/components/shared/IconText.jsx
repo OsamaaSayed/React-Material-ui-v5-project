@@ -3,6 +3,9 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+
+import { StyledServicesIconBox } from "../../styled/StyledBox";
+
 const IconText = ({ Icon, title, subTitle }) => {
   return (
     <>
@@ -13,17 +16,9 @@ const IconText = ({ Icon, title, subTitle }) => {
         spacing={4}
         marginBottom="30px"
       >
-        <Box
-          bgcolor="#1ca7ec"
-          padding="20px"
-          borderRadius="50%"
-          color="#fff"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <StyledServicesIconBox>
           <Icon sx={{ fontSize: "30px" }} />
-        </Box>
+        </StyledServicesIconBox>
 
         <Box>
           <Typography

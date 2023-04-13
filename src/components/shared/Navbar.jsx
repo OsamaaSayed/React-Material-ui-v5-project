@@ -8,6 +8,8 @@ import Link from "@mui/material/Link";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
+import Logo from '../../assets/images/logo-white.png'
+
 const pages = [
   "Home",
   "Features",
@@ -45,7 +47,7 @@ function Navbar() {
               sx={{ ":hover": { backgroundColor: "transparent" }, p: "0px" }}
             >
               <img
-                src="/src/assets/images/logo-white.png"
+                src={Logo}
                 alt="Logo"
                 style={{ width: 150 }}
               />

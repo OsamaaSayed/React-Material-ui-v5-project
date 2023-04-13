@@ -3,12 +3,17 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 
-import SettingsIcon from "@mui/icons-material/Settings";
-import LaptopIcon from "@mui/icons-material/Laptop";
-
 import SectionTitle from "../../components/shared/SectionTitle";
 import IconText from "../../components/shared/IconText";
+
+import SettingsIcon from "@mui/icons-material/Settings";
+import LaptopIcon from "@mui/icons-material/Laptop";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+
+import { StyledServicesAboutBox } from "./../../styled/StyledBox";
+import { StyledServicesAboutGrid } from "../../styled/StyledGrid";
+
+import bgServices from '../../assets/images/bg-left-img-2.jpg'
 
 const Services = () => {
   const data = {
@@ -45,34 +50,23 @@ const Services = () => {
     <>
       <Box bgcolor="#fff" position="relative">
         <Grid container>
-
-          <Grid
+          <StyledServicesAboutGrid
+            sx={{ marginRight: { md: "50%" } }}
             item
             md={6}
-            sx={{
-              position: { md: "absolute" },
-              height: { xs: "500px", md: "100%" },
-            }}
-            top={0}
-            width="100%"
           >
-            <Box
-              height="100%"
-              width="100%"
+            <StyledServicesAboutBox
               sx={{
-                backgroundImage: "url(/src/assets/images/bg-left-img-2.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${bgServices})`
               }}
-            ></Box>
-          </Grid>
+            ></StyledServicesAboutBox>
+          </StyledServicesAboutGrid>
 
           <Grid
             item
             md={6}
             sx={{
-              marginLeft: { md: "50%" }
+              marginLeft: { md: "50%" },
             }}
           >
             <Box padding="100px 50px">
@@ -87,11 +81,9 @@ const Services = () => {
                     subTitle={stack.subTitle}
                   />
                 ))}
-
               </Stack>
             </Box>
           </Grid>
-
         </Grid>
       </Box>
     </>
