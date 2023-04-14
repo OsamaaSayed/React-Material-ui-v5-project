@@ -8,5 +8,6 @@ export const StyledServicesAboutGrid = styled(Grid)(({ theme }) => ({
     height: "100%",
     position: "absolute",
   },
-  [theme.breakpoints.down("md")]: { height: "500px" },
+  [theme.breakpoints.down("md")]: { height: "300px" }
 }));
+

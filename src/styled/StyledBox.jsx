@@ -35,3 +35,24 @@ export const StyledServicesAboutBox = styled(Box)(() => ({
   backgroundRepeat: "no-repeat",
 }));
 
+export const StyledTeamIconBox = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "space-evenly",
+  alignItems: "center",
+  color: "white",
+  position: "absolute",
+  width: "100%",
+  bottom: -25,
+  left: 0,
+  borderRadius: "5px",
+  textAlign: "center",
+  transition: "all .5s ease",
+}));
+
+export const StyledTeamImgBox = styled(Box)(() => ({
+  borderRadius: "4px",
+  transition: "all .5s ease",
+  verticalAlign: "middle",
+  width: "100%",
+}));
+

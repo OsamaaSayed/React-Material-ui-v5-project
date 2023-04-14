@@ -50,6 +50,7 @@ const Services = () => {
     <>
       <Box bgcolor="#fff" position="relative">
         <Grid container>
+
           <StyledServicesAboutGrid
             sx={{ marginRight: { md: "50%" } }}
             item
@@ -84,6 +85,7 @@ const Services = () => {
               </Stack>
             </Box>
           </Grid>
+          
         </Grid>
       </Box>
     </>

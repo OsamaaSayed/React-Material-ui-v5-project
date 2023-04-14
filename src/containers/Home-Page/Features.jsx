@@ -12,12 +12,11 @@ import FeaturesBox from "./../../components/FeaturesBox";
 import SectionTitle from "../../components/shared/SectionTitle";
 
 const Features = () => {
-  
   const data = {
     h4: "The Best Business Template",
     h1: "Our Features",
     p: "Responsive and Raw One-Page HTML5 Template. Build whatever you likewith this Template, when an unknown printer took a galley of type andscrambled it to make a type specimen book.",
-    color:"#fff"
+    color: "#fff",
   };
 
   const featuresBoxData = [
@@ -37,7 +36,7 @@ const Features = () => {
             </Grid>
           </Grid>
 
-          <Grid container marginTop="50px" columnSpacing={3} rowSpacing={2}>
+          <Grid container marginTop="50px" spacing={3}>
             {featuresBoxData.map((box) => (
               <Grid key={box.id} item sm={6} md={3}>
                 <FeaturesBox Icon={box.icon} title={box.title} />

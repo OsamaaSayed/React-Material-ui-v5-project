@@ -9,6 +9,7 @@ import SectionTitle from "../../components/shared/SectionTitle";
 import { StyledAboutUsButton } from "../../styled/StyledButton";
 import { StyledServicesAboutBox } from "./../../styled/StyledBox";
 import { StyledServicesAboutGrid } from "./../../styled/StyledGrid";
+import { StyledTyporgraphy } from "../../styled/StyledTypography";
 
 import bgAbout from '../../assets/images/bg-left-img.jpg'
 
@@ -36,18 +37,18 @@ const About = () => {
             <Box padding="100px 50px">
               <Stack>
                 <SectionTitle data={data} />
-                <Typography marginBottom="10px" color="#888">
+                <StyledTyporgraphy >
                   Vivamus enim metus, varius et nunc quis, elementum pharetra
                   turpis. Proin vel massa sed turpis auctor consectetur. Proin
                   rhoncus eleifend pulvinar.
-                </Typography>
-                <Typography marginBottom="10px" color="#888">
+                </StyledTyporgraphy>
+                <StyledTyporgraphy>
                   Nam suscipit, enim eu semper porta, est magna facilisis lorem,
                   sagittis sollicitudin ipsum ipsum at tortor. Proin diam massa,
                   fermentum eget nisl consequat, viverra accumsan turpis.
                   Maecenas non nunc quis odio dignissim efficitur eget eu leo.
                   Donec ut accumsan metus, sit amet efficitur diam.
-                </Typography>
+                </StyledTyporgraphy>
                 <Box>
                   <StyledAboutUsButton>Buy Template</StyledAboutUsButton>
                 </Box>
