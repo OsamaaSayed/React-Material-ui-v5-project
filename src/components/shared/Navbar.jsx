@@ -10,13 +10,16 @@ import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
 import List from "@mui/material/List";
 
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { StyledList } from "../../styled/StyledList";
 import { StyledLink } from "../../styled/StyledLink";
 
-import Logo from "../../assets/images/logo-white.png";
+import LogoWhite from "../../assets/images/logo-white.png";
+import LogoBlack from "../../assets/images/logo-black.png";
 
 const Links = [
   { label: "Home", href: "#" },
@@ -31,7 +34,7 @@ const Links = [
 ];
 
 function Navbar() {
-  // -------- State ---------
+  // -------- States ---------
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   // -------- handlers ----------
@@ -44,13 +47,17 @@ function Navbar() {
     setDrawerOpen(false);
   };
 
+  // -------- hooks ---------
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
+
   return (
     <AppBar
       position="fixed"
       sx={{
-        boxShadow: "none",
-        backgroundColor: "transparent",
-        padding: "15px 0px",
+        boxShadow: `${trigger ? "" : "none"}`,
+        backgroundColor: `${trigger ? "#fff" : "transparent"}`,
+        padding: `${trigger ? "0px" : "15px 0px"}`,
+        transition: "all .3s ease-in-out",
       }}
     >
       <Container maxWidth="xl">
@@ -63,13 +70,13 @@ function Navbar() {
               alignItems: "center",
             }}
           >
-            <IconButton
-              href="#"
-              aria-label="logo"
-              sx={{ ":hover": { backgroundColor: "transparent" }, p: "0px" }}
-            >
-              <img src={Logo} alt="Logo" style={{ width: 130 }} />
-            </IconButton>
+            <Link href="#">
+              {trigger ? (
+                <img src={LogoBlack} alt="Logo" style={{ width: 130 }} />
+              ) : (
+                <img src={LogoWhite} alt="Logo" style={{ width: 130 }} />
+              )}
+            </Link>
           </Box>
 
           {/* Nav links Shows only in md */}
@@ -84,7 +91,14 @@ function Navbar() {
             <StyledList>
               {Links.map((link) => (
                 <ListItem key={link.label} style={{ padding: "0px 10px" }}>
-                  <StyledLink href={link.href} underline="none">
+                  <StyledLink
+                    href={link.href}
+                    underline="none"
+                    sx={{
+                      color: `${trigger ? "#000" : "#fff"}`,
+                      transition: "all .3s ease-in-out",
+                    }}
+                  >
                     {link.label}
                   </StyledLink>
                 </ListItem>
@@ -101,7 +115,12 @@ function Navbar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               color="inherit"
-              sx={{ "&:hover": { backgroundColor: "transparent" }, p: "0px" }}
+              sx={{
+                color: `${trigger ? "#000" : "#fff"}`,
+                "&:hover": { backgroundColor: "transparent" },
+                p: "0px",
+                transition: "all .3s ease-in-out",
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -129,8 +148,8 @@ function Navbar() {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Link href="#" sx={{ cursor: "pointer" }}>
-                    <img src={Logo} alt="Logo" style={{ width: 130 }} />
+                  <Link href="#" onClick={handleDrawerClose}>
+                    <img src={LogoWhite} alt="Logo" style={{ width: 130 }} />
                   </Link>
 
                   <CloseIcon
@@ -152,6 +171,7 @@ function Navbar() {
                         style={{ width: "fit-content" }}
                       >
                         <StyledLink
+                          onClick={handleDrawerClose}
                           href={link.href}
                           underline="none"
                           sx={{

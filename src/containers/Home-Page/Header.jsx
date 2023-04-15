@@ -72,7 +72,7 @@ const Header = () => {
             </Box>
 
             <Box>
-              <StyledHeaderButton size="small" endIcon={<ArrowDownwardIcon />}>
+              <StyledHeaderButton href="#features" size="small" endIcon={<ArrowDownwardIcon />}>
                 Keep Reading
               </StyledHeaderButton>
             </Box>
