@@ -3,9 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
 import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
 
 import SectionTitle from "./../../components/shared/SectionTitle";
 import TeamBox from "./../../components/TeamBox";
@@ -16,6 +14,7 @@ import {
   StyledTyporgraphy,
   Styledh4Typography,
 } from "../../styled/StyledTypography";
+import { StyledTeamIconButton } from "../../styled/StyledButton";
 
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 
@@ -60,17 +59,13 @@ const Team = () => {
 
   return (
     <>
-      <Box paddingY="120px" bgcolor="#1d2124" position="relative">
+      <Box component="section" id="team" paddingY="120px" bgcolor="#1d2124" position="relative">
         <Container>
-
-
           <Grid container>
             <Grid item md={8} margin="auto" textAlign="center">
               <SectionTitle data={data} />
             </Grid>
           </Grid>
-
-
 
           <Grid container marginTop="50px" spacing={3}>
             {teamBoxData.map((box) => (
@@ -80,14 +75,8 @@ const Team = () => {
             ))}
           </Grid>
 
-
-
           <Grid container marginTop="50px" spacing={3}>
-
-
-
             <Grid item md={6}>
-
               <Box>
                 <Styledh2Typography>Who We Are</Styledh2Typography>
                 <StyledTyporgraphy marginTop="40px">
@@ -103,19 +92,16 @@ const Team = () => {
                   right through to digital.
                 </StyledTyporgraphy>
 
-                <Stack direction="row" alignItems="center" spacing={2} marginTop="30px">
-                    
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  spacing={2}
+                  marginTop="30px"
+                >
                   {/* Button to open dialog */}
-                  <IconButton
-                    onClick={handleClickOpen}
-                    sx={{
-                      borderRadius: "50px",
-                      border: "2px solid #fff",
-                      color: "#fff",
-                    }}
-                  >
+                  <StyledTeamIconButton onClick={handleClickOpen}>
                     <PlayArrowRoundedIcon color="inherit" />
-                  </IconButton>
+                  </StyledTeamIconButton>
 
                   {/* The Dialog */}
                   <Dialog
@@ -123,8 +109,8 @@ const Team = () => {
                     onClose={handleClose}
                     PaperProps={{
                       sx: {
-                        width: { xs: "80%", sm: "70%", md: "50%" },
-                        height: { xs: "50%", sm: "70%", md: "50%" },
+                        width: { xs: "80%", sm: "70%", md: "40%" },
+                        height: { xs: "50%", sm: "70%", md: "60%" },
                         backgroundColor: "transparent",
                       },
                     }}
@@ -136,7 +122,7 @@ const Team = () => {
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </Dialog>
 
@@ -145,11 +131,8 @@ const Team = () => {
                       See Our Work
                     </Styledh4Typography>
                   </Box>
-
                 </Stack>
               </Box>
-
-
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -161,12 +144,7 @@ const Team = () => {
                 />
               ))}
             </Grid>
-
-
           </Grid>
-
-
-
         </Container>
       </Box>
     </>

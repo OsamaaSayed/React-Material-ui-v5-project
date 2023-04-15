@@ -48,7 +48,7 @@ const Services = () => {
 
   return (
     <>
-      <Box bgcolor="#fff" position="relative">
+      <Box component="section" id="services" bgcolor="#fff" position="relative">
         <Grid container>
 
           <StyledServicesAboutGrid

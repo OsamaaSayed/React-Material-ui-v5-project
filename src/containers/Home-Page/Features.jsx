@@ -28,7 +28,7 @@ const Features = () => {
 
   return (
     <>
-      <Box paddingY="120px" bgcolor="#1d2124" position="relative">
+      <Box component="section" id="features" paddingY="120px" bgcolor="#1d2124" position="relative">
         <Container>
           <Grid container>
             <Grid item md={8} margin="auto" textAlign="center">

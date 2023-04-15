@@ -15,7 +15,7 @@ import homeBg from "../../assets/images/home-bg-4.jpg";
 const Header = () => {
   return (
     <>
-      <Box
+      <Box component="section"
         minHeight="100vh"
         sx={{
           backgroundImage: `url(${homeBg})`,
