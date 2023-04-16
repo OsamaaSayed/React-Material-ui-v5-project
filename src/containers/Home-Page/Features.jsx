@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -28,7 +28,13 @@ const Features = () => {
 
   return (
     <>
-      <Box component="section" id="features" paddingY="120px" bgcolor="#1d2124" position="relative">
+      <Box
+        component="section"
+        id="features"
+        paddingY="120px"
+        bgcolor="#1d2124"
+        position="relative"
+      >
         <Container>
           <Grid container>
             <Grid item md={8} margin="auto" textAlign="center">

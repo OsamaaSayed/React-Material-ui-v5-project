@@ -4,6 +4,7 @@ import Features from "../../containers/Home-Page/Features";
 import Services from "../../containers/Home-Page/Services";
 import About from "../../containers/Home-Page/About";
 import Team from "../../containers/Home-Page/Team";
+import Work from "../../containers/Home-Page/Work";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Services />
       <About />
       <Team />
+      <Work />
     </>
   );
 };

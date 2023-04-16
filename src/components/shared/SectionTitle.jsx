@@ -8,7 +8,6 @@ import {
 } from "../../styled/StyledTypography";
 
 const SectionTitle = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Box marginBottom="30px">

@@ -25,15 +25,15 @@ import team4Img from "../../assets/images/team-04.jpg";
 
 const Team = () => {
   // ---------- State --------
-  const [open, setOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   // --------- handlers ---------
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleDialogOpen = () => {
+    setDialogOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleDialogClose = () => {
+    setDialogOpen(false);
   };
 
   const data = {
@@ -99,19 +99,19 @@ const Team = () => {
                   marginTop="30px"
                 >
                   {/* Button to open dialog */}
-                  <StyledTeamIconButton onClick={handleClickOpen}>
+                  <StyledTeamIconButton onClick={handleDialogOpen}>
                     <PlayArrowRoundedIcon color="inherit" />
                   </StyledTeamIconButton>
 
                   {/* The Dialog */}
                   <Dialog
-                    open={open}
-                    onClose={handleClose}
+                    open={dialogOpen}
+                    onClose={handleDialogClose}
                     PaperProps={{
                       sx: {
                         width: { xs: "80%", sm: "70%", md: "40%" },
                         height: { xs: "50%", sm: "70%", md: "60%" },
-                        backgroundColor: "transparent",
+                        backgroundColor: "#000",
                       },
                     }}
                   >
