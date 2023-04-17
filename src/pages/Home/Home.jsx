@@ -5,6 +5,7 @@ import Services from "../../containers/Home-Page/Services";
 import About from "../../containers/Home-Page/About";
 import Team from "../../containers/Home-Page/Team";
 import Work from "../../containers/Home-Page/Work";
+import Packages from "../../containers/Home-Page/Packages";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <About />
       <Team />
       <Work />
+      <Packages/>
     </>
   );
 };

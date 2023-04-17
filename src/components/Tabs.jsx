@@ -83,7 +83,7 @@ const Tabs = () => {
           </TabList>
         </Box>
 
-        <TabPanel value="1" sx={{ p: "24px 0px" }}>
+        <TabPanel value="1" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
@@ -121,7 +121,7 @@ const Tabs = () => {
           </Box>
         </TabPanel>
 
-        <TabPanel value="2" sx={{ p: "24px 0px" }}>
+        <TabPanel value="2" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
@@ -140,7 +140,7 @@ const Tabs = () => {
           </Box>
         </TabPanel>
 
-        <TabPanel value="3" sx={{ p: "24px 0px" }}>
+        <TabPanel value="3" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
@@ -155,7 +155,7 @@ const Tabs = () => {
           </Box>
         </TabPanel>
 
-        <TabPanel value="4" sx={{ p: "24px 0px" }}>
+        <TabPanel value="4" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
@@ -187,14 +187,14 @@ const Tabs = () => {
           </Box>
         </TabPanel>
 
-        <TabPanel value="5" sx={{ p: "24px 0px" }}>
+        <TabPanel value="5" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
               isMd ? gridTemplateAreasMd : gridTemplateAreasXs
             }`}
             gridAutoColumns="1fr"
-            gridAutoRows="200px"
+            gridTemplateRows="200px"
           >
             <Box gridArea="fifteen" height="auto" gridColumn="1/5" gridRow="1">
               <Box component="img" src={Img15} width="100%" height="100%" />
@@ -206,7 +206,7 @@ const Tabs = () => {
           </Box>
         </TabPanel>
 
-        <TabPanel value="6" sx={{ p: "24px 0px" }}>
+        <TabPanel value="6" sx={{ p: "24px 0 0 0" }}>
           <Box
             display="grid"
             gridTemplateAreas={`${
