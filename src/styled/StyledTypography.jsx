@@ -39,3 +39,13 @@ export const StyledTyporgraphy = styled(Typography)(() => ({
   marginBottom: "10px",
   color: "#888",
 }));
+
+export const StyledBlogBoxTitle = styled(Typography)(() => ({
+  color: "#fff",
+  fontSize: "18px",
+  fontWeight: "600",
+  margin: "5px 0px",
+  cursor: "pointer",
+  "&:hover": { color: "#1CA7EC" },
+  transition: "all 0.2s ease-in-out",
+}));

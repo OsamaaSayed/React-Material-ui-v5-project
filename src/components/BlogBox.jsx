@@ -2,10 +2,11 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+
+import { StyledBlogBoxTitle } from "../styled/StyledTypography";
 
 const BlogBox = ({ src, title, caption }) => {
   return (
@@ -25,22 +26,9 @@ const BlogBox = ({ src, title, caption }) => {
             />
           </Box>
           <Box>
-            <Typography
-              component="a"
-              variant="h3"
-              underline="none"
-              color="#fff"
-              fontSize="18px"
-              fontWeight="600"
-              marginY="5px"
-              sx={{
-                cursor: "pointer",
-                "&:hover": { color: "#1CA7EC" },
-                transition: "all 0.2s ease-in-out",
-              }}
-            >
+            <StyledBlogBoxTitle component="a" variant="h3">
               {title}
-            </Typography>
+            </StyledBlogBoxTitle>
             <Typography color="#888" fontSize="13px">
               {caption}
             </Typography>

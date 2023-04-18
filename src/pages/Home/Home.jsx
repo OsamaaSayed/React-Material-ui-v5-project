@@ -8,6 +8,7 @@ import Work from "../../containers/Home-Page/Work";
 import Packages from "../../containers/Home-Page/Packages";
 import CarouselSection from './../../containers/Home-Page/CarouselSection';
 import Blog from "../../containers/Home-Page/Blog";
+import Contact from "../../containers/Home-Page/Contact";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Packages/>
       <CarouselSection/>
       <Blog/>
+      <Contact/>
     </>
   );
 };

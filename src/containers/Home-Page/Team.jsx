@@ -59,7 +59,7 @@ const Team = () => {
 
   return (
     <>
-      <Box component="section" id="team" paddingY="120px" bgcolor="#1d2124" position="relative">
+      <Box component="section" id="team" paddingTop="120px" bgcolor="#1d2124" position="relative">
         <Container>
           <Grid container>
             <Grid item md={8} margin="auto" textAlign="center">
