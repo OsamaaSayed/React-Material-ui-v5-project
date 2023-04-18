@@ -24,7 +24,7 @@ const Packages = () => {
     <>
       <Box
         component="section"
-        id="packages"
+        id="pricing"
         paddingY="120px"
         bgcolor="#fff"
         position="relative"
