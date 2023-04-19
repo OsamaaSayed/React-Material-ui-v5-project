@@ -1,10 +1,10 @@
 # React & Material ui v5 project🔥
 
-### ✅Fully Responsive One-Page Website using React JS & Material UI v5 
-### ✅Designed to showcase a service, and includes sections for features, services, about, team, work, pricing, blog, and and a call-to-action.
-### ✅Smooth Animations using react animation on scroll
-### ✅Particles Animations using react-tsparticles
-### ✅Typewriter Effect
+#### ✅Fully Responsive One-Page Website using React JS & Material UI v5 
+#### ✅Designed to showcase a service, and includes sections for features, services, about, team, work, pricing, blog, and and a call-to-action.
+#### ✅Smooth Animations using react animation on scroll
+#### ✅Particles Animations using react-tsparticles
+#### ✅Typewriter Effect
 
 ## 📸Screenshot
 
