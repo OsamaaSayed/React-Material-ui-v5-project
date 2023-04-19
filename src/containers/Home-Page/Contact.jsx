@@ -78,7 +78,7 @@ const Contact = () => {
                 <Stack rowGap={3} >
 
                   <Grid container spacing={2} >
-                    <Grid item sm={12} md={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                       <TextField fullWidth
                         label="Name"
                         variant="outlined"
@@ -86,16 +86,16 @@ const Contact = () => {
                         autoFocus
                       />
                     </Grid>
-                    <Grid item sm={12} md={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                       <TextField fullWidth label="Email" variant="outlined" required />
                     </Grid>
                   </Grid>
 
                   <Grid container spacing={2}>
-                    <Grid item sm={12} md={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                       <TextField fullWidth label="Phone" variant="outlined" />
                     </Grid>
-                    <Grid item sm={12} md={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                       <TextField fullWidth label="Subject" variant="outlined" />
                     </Grid>
                   </Grid>
