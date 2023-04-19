@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -59,89 +60,103 @@ const Team = () => {
 
   return (
     <>
-      <Box component="section" id="team" paddingTop="120px" bgcolor="#1d2124" position="relative">
+      <Box
+        component="section"
+        id="team"
+        paddingTop="120px"
+        bgcolor="#1d2124"
+        position="relative"
+      >
         <Container>
-          <Grid container>
-            <Grid item md={8} margin="auto" textAlign="center">
-              <SectionTitle data={data} />
+          <AnimationOnScroll animateIn="animate__fadeInDown">
+            <Grid container>
+              <Grid item md={8} margin="auto" textAlign="center">
+                <SectionTitle data={data} />
+              </Grid>
             </Grid>
-          </Grid>
+          </AnimationOnScroll>
 
           <Grid container marginTop="50px" spacing={3}>
             {teamBoxData.map((box) => (
               <Grid item key={box.id} sm={6} md={3}>
-                <TeamBox src={box.src} name={box.name} title={box.title} />
+                <AnimationOnScroll animateIn="animate__fadeInRight">
+                  <TeamBox src={box.src} name={box.name} title={box.title} />
+                </AnimationOnScroll>
               </Grid>
             ))}
           </Grid>
 
           <Grid container marginTop="50px" spacing={3}>
             <Grid item md={6}>
-              <Box>
-                <Styledh2Typography>Who We Are</Styledh2Typography>
-                <StyledTyporgraphy marginTop="40px">
-                  The integration of web fonts has always been one of the
-                  largest contributing factors to diversity in the overall look
-                  and feel of websites today vs. yesterday. Fonts, just like
-                  images, play an important role in helping a websites overall
-                  design stand out from the competition.
-                </StyledTyporgraphy>
-                <StyledTyporgraphy>
-                  Bottom line is we want you to succeed at Faculty Were full
-                  service which means weve got you covered on design and content
-                  right through to digital.
-                </StyledTyporgraphy>
+              <AnimationOnScroll animateIn="animate__fadeIn">
+                <Box>
+                  <Styledh2Typography>Who We Are</Styledh2Typography>
+                  <StyledTyporgraphy marginTop="40px">
+                    The integration of web fonts has always been one of the
+                    largest contributing factors to diversity in the overall
+                    look and feel of websites today vs. yesterday. Fonts, just
+                    like images, play an important role in helping a websites
+                    overall design stand out from the competition.
+                  </StyledTyporgraphy>
+                  <StyledTyporgraphy>
+                    Bottom line is we want you to succeed at Faculty Were full
+                    service which means weve got you covered on design and
+                    content right through to digital.
+                  </StyledTyporgraphy>
 
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  spacing={2}
-                  marginTop="30px"
-                >
-                  {/* Button to open dialog */}
-                  <StyledTeamIconButton onClick={handleDialogOpen}>
-                    <PlayArrowRoundedIcon color="inherit" />
-                  </StyledTeamIconButton>
-
-                  {/* The Dialog */}
-                  <Dialog
-                    open={dialogOpen}
-                    onClose={handleDialogClose}
-                    PaperProps={{
-                      sx: {
-                        width: { xs: "80%", sm: "70%", md: "40%" },
-                        height: { xs: "50%", sm: "70%", md: "60%" },
-                        backgroundColor: "#000",
-                      },
-                    }}
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    spacing={2}
+                    marginTop="30px"
                   >
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/sU3FkzUKHXU"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </Dialog>
+                    {/* Button to open dialog */}
+                    <StyledTeamIconButton onClick={handleDialogOpen}>
+                      <PlayArrowRoundedIcon color="inherit" />
+                    </StyledTeamIconButton>
 
-                  <Box>
-                    <Styledh4Typography sx={{ marginBottom: "0px" }}>
-                      See Our Work
-                    </Styledh4Typography>
-                  </Box>
-                </Stack>
-              </Box>
+                    {/* The Dialog */}
+                    <Dialog
+                      open={dialogOpen}
+                      onClose={handleDialogClose}
+                      PaperProps={{
+                        sx: {
+                          width: { xs: "80%", sm: "70%", md: "40%" },
+                          height: { xs: "50%", sm: "70%", md: "60%" },
+                          backgroundColor: "#000",
+                        },
+                      }}
+                    >
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/sU3FkzUKHXU"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </Dialog>
+
+                    <Box>
+                      <Styledh4Typography sx={{ marginBottom: "0px" }}>
+                        See Our Work
+                      </Styledh4Typography>
+                    </Box>
+                  </Stack>
+                </Box>
+              </AnimationOnScroll>
             </Grid>
 
             <Grid item xs={12} md={6}>
               {progressBarData.map((item) => (
-                <ProgressBar
-                  key={item.id}
-                  title={item.title}
-                  value={item.value}
-                />
+                <AnimationOnScroll animateIn="animate__fadeIn">
+                  <ProgressBar
+                    key={item.id}
+                    title={item.title}
+                    value={item.value}
+                  />
+                </AnimationOnScroll>
               ))}
             </Grid>
           </Grid>

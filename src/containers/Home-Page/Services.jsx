@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
@@ -13,7 +14,7 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 import { StyledServicesAboutBox } from "./../../styled/StyledBox";
 import { StyledServicesAboutGrid } from "../../styled/StyledGrid";
 
-import bgServices from '../../assets/images/bg-left-img-2.jpg'
+import bgServices from "../../assets/images/bg-left-img-2.jpg";
 
 const Services = () => {
   const data = {
@@ -50,7 +51,6 @@ const Services = () => {
     <>
       <Box component="section" id="services" bgcolor="#fff" position="relative">
         <Grid container>
-
           <StyledServicesAboutGrid
             sx={{ marginRight: { md: "50%" } }}
             item
@@ -58,34 +58,35 @@ const Services = () => {
           >
             <StyledServicesAboutBox
               sx={{
-                backgroundImage: `url(${bgServices})`
+                backgroundImage: `url(${bgServices})`,
               }}
             ></StyledServicesAboutBox>
           </StyledServicesAboutGrid>
 
-          <Grid
-            item
-            md={6}
-            sx={{
-              marginLeft: { md: "50%" },
-            }}
-          >
-            <Box padding="100px 50px">
-              <Stack justifyContent="center" alignItems="start">
-                <SectionTitle data={data} />
+          <AnimationOnScroll animateIn="animate__fadeIn">
+            <Grid
+              item
+              md={6}
+              sx={{
+                marginLeft: { md: "50%" },
+              }}
+            >
+              <Box padding="100px 50px">
+                <Stack justifyContent="center" alignItems="start">
+                  <SectionTitle data={data} />
 
-                {IconTextData.map((stack) => (
-                  <IconText
-                    key={stack.id}
-                    Icon={stack.icon}
-                    title={stack.title}
-                    subTitle={stack.subTitle}
-                  />
-                ))}
-              </Stack>
-            </Box>
-          </Grid>
-          
+                  {IconTextData.map((stack) => (
+                    <IconText
+                      key={stack.id}
+                      Icon={stack.icon}
+                      title={stack.title}
+                      subTitle={stack.subTitle}
+                    />
+                  ))}
+                </Stack>
+              </Box>
+            </Grid>
+          </AnimationOnScroll>
         </Grid>
       </Box>
     </>

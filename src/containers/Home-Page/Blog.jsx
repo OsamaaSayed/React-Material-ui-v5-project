@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -52,20 +53,24 @@ const Blog = () => {
         position="relative"
       >
         <Container>
-          <Grid container>
-            <Grid item md={8} margin="auto" textAlign="center">
-              <SectionTitle data={data} />
+          <AnimationOnScroll animateIn="animate__fadeInDown">
+            <Grid container>
+              <Grid item md={8} margin="auto" textAlign="center">
+                <SectionTitle data={data} />
+              </Grid>
             </Grid>
-          </Grid>
+          </AnimationOnScroll>
 
           <Grid container marginTop="50px" spacing={3}>
             {blogBoxData.map((box) => (
               <Grid item key={box.id} sm={6} md={4}>
-                <BlogBox
-                  src={box.src}
-                  title={box.title}
-                  caption={box.caption}
-                />
+                <AnimationOnScroll animateIn="animate__fadeInRight">
+                  <BlogBox
+                    src={box.src}
+                    title={box.title}
+                    caption={box.caption}
+                  />
+                </AnimationOnScroll>
               </Grid>
             ))}
           </Grid>

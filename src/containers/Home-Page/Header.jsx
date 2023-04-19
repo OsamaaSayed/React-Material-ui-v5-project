@@ -12,6 +12,7 @@ import ParticlesComponent from "../../components/ParticlesComponent";
 import { StyledHeaderButton } from "./../../styled/StyledButton";
 
 import homeBg from "../../assets/images/home-bg-4.jpg";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Header = () => {
   return (
@@ -64,10 +65,7 @@ const Header = () => {
             </Box>
 
             <Box>
-              <Typography
-                color="white"
-                sx={{ textTransform: "uppercase" }}
-              >
+              <Typography color="white" sx={{ textTransform: "uppercase" }}>
                 <Typewriter
                   options={{
                     strings: "New Html Template Generation",
@@ -88,6 +86,7 @@ const Header = () => {
               </StyledHeaderButton>
             </Box>
           </Stack>
+          
         </Box>
         <ParticlesComponent id="tsparticles" />
       </Box>

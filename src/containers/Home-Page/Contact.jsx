@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import  TextField  from "@mui/material/TextField";
+import TextField from "@mui/material/TextField";
 
 import IconText from "../../components/shared/IconText";
 
@@ -16,6 +16,7 @@ import {
   Styledh4Typography,
 } from "../../styled/StyledTypography";
 import { StyledAboutUsButton } from "../../styled/StyledButton";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Contact = () => {
   const IconTextData = [
@@ -51,72 +52,84 @@ const Contact = () => {
         <Container>
           <Grid container marginTop="50px" spacing={3}>
             <Grid item md={6}>
-              <Box>
-                <Styledh4Typography>Get in touch</Styledh4Typography>
-                <Styledh2Typography sx={{ color: "#000", marginTop: 0 }}>
-                  Contact Us
-                </Styledh2Typography>
+              <AnimationOnScroll animateIn="animate__fadeInLeft">
+                <Box>
+                  <Styledh4Typography>Get in touch</Styledh4Typography>
+                  <Styledh2Typography sx={{ color: "#000", marginTop: 0 }}>
+                    Contact Us
+                  </Styledh2Typography>
 
-                <Box marginTop="50px">
-                  <Stack justifyContent="center" alignItems="start">
-                    {IconTextData.map((stack) => (
-                      <IconText
-                        key={stack.id}
-                        Icon={stack.icon}
-                        title={stack.title}
-                        subTitle={stack.subTitle}
-                      />
-                    ))}
-                  </Stack>
+                  <Box marginTop="50px">
+                    <Stack justifyContent="center" alignItems="start">
+                      {IconTextData.map((stack) => (
+                        <IconText
+                          key={stack.id}
+                          Icon={stack.icon}
+                          title={stack.title}
+                          subTitle={stack.subTitle}
+                        />
+                      ))}
+                    </Stack>
+                  </Box>
                 </Box>
-              </Box>
+              </AnimationOnScroll>
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Box marginTop="50px">
+              <AnimationOnScroll animateIn="animate__fadeInRight">
+                <Box marginTop="50px">
+                  <Stack rowGap={3}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} sm={12} md={6}>
+                        <TextField
+                          fullWidth
+                          label="Name"
+                          variant="outlined"
+                          required
+                          autoFocus
+                        />
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={6}>
+                        <TextField
+                          fullWidth
+                          label="Email"
+                          variant="outlined"
+                          required
+                        />
+                      </Grid>
+                    </Grid>
 
-                <Stack rowGap={3} >
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} sm={12} md={6}>
+                        <TextField fullWidth label="Phone" variant="outlined" />
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={6}>
+                        <TextField
+                          fullWidth
+                          label="Subject"
+                          variant="outlined"
+                        />
+                      </Grid>
+                    </Grid>
 
-                  <Grid container spacing={2} >
-                    <Grid item xs={12} sm={12} md={6}>
-                      <TextField fullWidth
-                        label="Name"
-                        variant="outlined"
+                    <Box>
+                      <TextField
+                        multiline
+                        label="Your Message"
                         required
-                        autoFocus
+                        fullWidth
+                        rows={5}
                       />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6}>
-                      <TextField fullWidth label="Email" variant="outlined" required />
-                    </Grid>
-                  </Grid>
+                    </Box>
 
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} sm={12} md={6}>
-                      <TextField fullWidth label="Phone" variant="outlined" />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6}>
-                      <TextField fullWidth label="Subject" variant="outlined" />
-                    </Grid>
-                  </Grid>
-
-                  <Box>
-                    <TextField
-                      multiline
-                      label="Your Message"
-                      required
-                      fullWidth
-                      rows={5}
-                    />
-                  </Box>
-
-                  <Box>
-                    <StyledAboutUsButton sx={{marginTop:0}}>Send</StyledAboutUsButton>
-                  </Box>
-
-                </Stack>
-
-              </Box>
+                    <Box>
+                      <StyledAboutUsButton sx={{ marginTop: 0 }}>
+                        Send
+                      </StyledAboutUsButton>
+                    </Box>
+                  </Stack>
+                </Box>
+              </AnimationOnScroll>
             </Grid>
           </Grid>
         </Container>

@@ -11,6 +11,8 @@ import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 import FeaturesBox from "./../../components/FeaturesBox";
 import SectionTitle from "../../components/shared/SectionTitle";
 
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 const Features = () => {
   const data = {
     h4: "The Best Business Template",
@@ -36,19 +38,23 @@ const Features = () => {
         position="relative"
       >
         <Container>
-          <Grid container>
-            <Grid item md={8} margin="auto" textAlign="center">
-              <SectionTitle data={data} />
-            </Grid>
-          </Grid>
-
-          <Grid container marginTop="50px" spacing={3}>
-            {featuresBoxData.map((box) => (
-              <Grid key={box.id} item sm={6} md={3}>
-                <FeaturesBox Icon={box.icon} title={box.title} />
+          <AnimationOnScroll animateIn="animate__fadeInDown">
+            <Grid container>
+              <Grid item md={8} margin="auto" textAlign="center">
+                <SectionTitle data={data} />
               </Grid>
-            ))}
-          </Grid>
+            </Grid>
+          </AnimationOnScroll>
+
+            <Grid container marginTop="50px" spacing={3}>
+              {featuresBoxData.map((box) => (
+                <Grid key={box.id} item sm={6} md={3}>
+                  <AnimationOnScroll animateIn="animate__fadeInLeft">
+                  <FeaturesBox Icon={box.icon} title={box.title} />
+                  </AnimationOnScroll>
+                </Grid>
+              ))}
+            </Grid>
         </Container>
       </Box>
     </>

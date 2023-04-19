@@ -1,12 +1,11 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 import SectionTitle from "../../components/shared/SectionTitle";
 import Tabs from "../../components/Tabs";
-
-
 
 const Work = () => {
   const data = {
@@ -26,19 +25,23 @@ const Work = () => {
         position="relative"
       >
         <Container>
-          <Grid container>
-            <Grid item md={8} margin="auto" textAlign="center">
-              <SectionTitle data={data} />
+          <AnimationOnScroll animateIn="animate__fadeInDown">
+            <Grid container>
+              <Grid item md={8} margin="auto" textAlign="center">
+                <SectionTitle data={data} />
+              </Grid>
             </Grid>
-          </Grid>
+          </AnimationOnScroll>
         </Container>
 
         {/* Tabs */}
-        <Grid container marginTop="50px">
-          <Grid item xs={12}>
-            <Tabs/>
+        <AnimationOnScroll animateIn="animate__fadeIn">
+          <Grid container marginTop="50px">
+            <Grid item xs={12}>
+              <Tabs />
+            </Grid>
           </Grid>
-        </Grid>
+        </AnimationOnScroll>
       </Box>
     </>
   );

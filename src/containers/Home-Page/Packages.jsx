@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -16,7 +17,7 @@ const Packages = () => {
 
   const packagesBoxData = [
     { id: 1, title: "Basic" },
-    { id: 2, title: "Standard" , color:"#1CA7EC"},
+    { id: 2, title: "Standard", color: "#1CA7EC" },
     { id: 3, title: "Premium" },
   ];
 
@@ -30,16 +31,20 @@ const Packages = () => {
         position="relative"
       >
         <Container>
-          <Grid container>
-            <Grid item md={8} margin="auto" textAlign="center">
-              <SectionTitle data={data} />
+          <AnimationOnScroll animateIn="animate__fadeInDown">
+            <Grid container>
+              <Grid item md={8} margin="auto" textAlign="center">
+                <SectionTitle data={data} />
+              </Grid>
             </Grid>
-          </Grid>
+          </AnimationOnScroll>
 
           <Grid container marginTop="50px" spacing={3}>
             {packagesBoxData.map((box) => (
               <Grid item key={box.id} xs={12} sm={6} md={4}>
-                <PackagesBox title={box.title} color={box.color} />
+                <AnimationOnScroll animateIn="animate__fadeInLeft">
+                  <PackagesBox title={box.title} color={box.color} />
+                </AnimationOnScroll>
               </Grid>
             ))}
           </Grid>

@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
@@ -26,6 +27,7 @@ const About = () => {
           container
           sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}
         >
+          <AnimationOnScroll animateIn="animate__fadeIn">
           <Grid
             item
             md={6}
@@ -54,7 +56,7 @@ const About = () => {
               </Stack>
             </Box>
           </Grid>
-
+          </AnimationOnScroll>
           <StyledServicesAboutGrid
             item
             md={6}
