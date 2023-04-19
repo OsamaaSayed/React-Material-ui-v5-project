@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -15,7 +16,8 @@ import homeBg from "../../assets/images/home-bg-4.jpg";
 const Header = () => {
   return (
     <>
-      <Box component="section"
+      <Box
+        component="section"
         minHeight="100vh"
         sx={{
           backgroundImage: `url(${homeBg})`,
@@ -63,16 +65,25 @@ const Header = () => {
 
             <Box>
               <Typography
-                variant="p"
                 color="white"
                 sx={{ textTransform: "uppercase" }}
               >
-                New Html Template Generation
+                <Typewriter
+                  options={{
+                    strings: "New Html Template Generation",
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </Typography>
             </Box>
 
             <Box>
-              <StyledHeaderButton href="#features" size="small" endIcon={<ArrowDownwardIcon />}>
+              <StyledHeaderButton
+                href="#features"
+                size="small"
+                endIcon={<ArrowDownwardIcon />}
+              >
                 Keep Reading
               </StyledHeaderButton>
             </Box>
