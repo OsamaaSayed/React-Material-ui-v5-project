@@ -12,7 +12,11 @@ const SectionTitle = ({ data }) => {
     <>
       <Box marginBottom="30px">
         <Styledh4Typography variant="h4">{data.h4}</Styledh4Typography>
-        <Styledh1Typography variant="h1" color={data.color}>
+        <Styledh1Typography
+          sx={{ fontSize: { xs: "45px", sm: "50px" } }}
+          variant="h1"
+          color={data.color}
+        >
           {data.h1}
         </Styledh1Typography>
         <Typography color="#888">{data.p}</Typography>

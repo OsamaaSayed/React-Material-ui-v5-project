@@ -63,7 +63,7 @@ const Services = () => {
             ></StyledServicesAboutBox>
           </StyledServicesAboutGrid>
 
-          <AnimationOnScroll animateIn="animate__fadeIn">
+          <AnimationOnScroll style={{width:"100%"}} animateIn="animate__fadeIn">
             <Grid
               item
               md={6}

@@ -137,7 +137,7 @@ function Navbar() {
               sx: {
                 backgroundColor: "#1d2124",
                 padding: "20px",
-                minWidth: "40%",
+                minWidth: "20%",
               },
             }}
           >
